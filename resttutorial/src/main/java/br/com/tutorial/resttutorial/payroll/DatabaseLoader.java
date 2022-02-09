@@ -9,7 +9,7 @@ public class DatabaseLoader implements CommandLineRunner {
 
     private final EmployeeRepository repository;
 
-    @Autowired
+    @Autowired //setta as coisa pra funcionar, por isso n precisa do new EmployeeRepository
     public DatabaseLoader(EmployeeRepository repository){
         this.repository = repository;
     }
@@ -17,5 +17,7 @@ public class DatabaseLoader implements CommandLineRunner {
     @Override
     public void run(String... strings) throws Exception {
         this.repository.save(new Employee("Frodo", "Baggins", "ring bearer"));
+        this.repository.save(new Employee("Tamiozzo", "Tinder", "meu futuro"));
+        this.repository.save(new Employee("Dianna", "Melhorque", "Evelynn"));
     }
 }
