@@ -1,4 +1,4 @@
-#!/bin/bash
+  #!/bin/bash
 
 SCRIPT_VERSION=0.5.1
 CHANGELOG="https://www.alsa-project.org/alsa-info.sh.changelog"
