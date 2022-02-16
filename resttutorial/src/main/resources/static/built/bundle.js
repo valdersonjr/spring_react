@@ -34146,7 +34146,8 @@ var App = /*#__PURE__*/function (_React$Component) {
       }).done(function (response) {
         _this2.setState({
           employees: response.entity._embedded.employees
-        });
+        }); //setState adiciona no props
+
       });
     }
   }, {
@@ -34175,7 +34176,7 @@ var Employee = /*#__PURE__*/function (_React$Component2) {
   _createClass(Employee, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("td", null, this.props.employee.firstName), /*#__PURE__*/React.createElement("td", null, this.props.employee.lastName), /*#__PURE__*/React.createElement("td", null, this.props.employee.description));
+      return /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("td", null, this.props.employee.id), /*#__PURE__*/React.createElement("td", null, this.props.employee.firstName), /*#__PURE__*/React.createElement("td", null, this.props.employee.lastName), /*#__PURE__*/React.createElement("td", null, this.props.employee.description));
     }
   }]);
 
@@ -34202,7 +34203,7 @@ var EmployeeList = /*#__PURE__*/function (_React$Component3) {
           employee: employee
         });
       });
-      return /*#__PURE__*/React.createElement("table", null, /*#__PURE__*/React.createElement("tbody", null, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", null, "First Name"), /*#__PURE__*/React.createElement("th", null, "Last Name"), /*#__PURE__*/React.createElement("th", null, "Description")), employees));
+      return /*#__PURE__*/React.createElement("table", null, /*#__PURE__*/React.createElement("tbody", null, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", null, "Id"), /*#__PURE__*/React.createElement("th", null, "First Name"), /*#__PURE__*/React.createElement("th", null, "Last Name"), /*#__PURE__*/React.createElement("th", null, "Description")), employees));
     }
   }]);
 
